@@ -1,0 +1,18 @@
+import cv2
+
+# Read image
+img = cv2.imread("sample.jpg")
+
+if img is None:
+    print("Image not found. Keep sample.jpg in same folder")
+    exit()
+
+# Apply blur
+blur = cv2.GaussianBlur(img, (15, 15), 0)
+
+# Show images
+cv2.imshow("Original Image", img)
+cv2.imshow("Blurred Image", blur)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()

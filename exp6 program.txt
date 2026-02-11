@@ -1,0 +1,22 @@
+import cv2
+
+# Read image
+img = cv2.imread("sample.jpg")
+
+if img is None:
+    print("Image not found. Keep sample.jpg in same folder")
+    exit()
+
+# Convert to grayscale
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# Convert to HSV
+hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+
+# Show images
+cv2.imshow("Original Image", img)
+cv2.imshow("Grayscale Image", gray)
+cv2.imshow("HSV Image", hsv)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
