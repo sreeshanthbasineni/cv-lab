@@ -14,4 +14,5 @@ plt.xlabel("Pixel Intensity")
 plt.ylabel("Frequency") 
 plt.legend() 
 plt.show() 
+
 analyze_histogram("sample.jpg")  # Replace with your image file
